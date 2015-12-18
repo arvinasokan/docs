@@ -226,6 +226,27 @@
 <li class="toctree-l2"><a class="reference internal" href="calibration.html#running-calibration">Running Calibration</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="gripper_integration.html">Tutorial: Interfacing Third Party Grippers with Fetch’s Arm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#mechanical-gripper-interface-of-fetch">Mechanical Gripper Interface of Fetch:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#electrical-gripper-interface-of-fetch">Electrical Gripper Interface of Fetch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#software-gripper-interface-of-fetch">Software Gripper Interface of Fetch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#outline-of-interfacing-grippers-with-fetch">Outline of Interfacing Grippers with Fetch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#removing-the-fetch-gripper">Removing the Fetch Gripper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#fetch-moveit-config">Fetch Moveit Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#robotiq-adaptive-robot-gripper-2-finger-85-fetch-integration-documentation">Robotiq Adaptive Robot Gripper 2-Finger 85 Fetch Integration Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#tried-and-tested-on">Tried and tested on</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#ros-driver-installation">Ros Driver Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#barrett-hand-bh-282-fetch-integration-documentation">Barrett Hand BH-282 Fetch Integration Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#id1">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#id2">Tried and tested on</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#software-setup">Software Setup:</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="api_overview.html">API Overview</a><ul>
@@ -407,7 +428,7 @@ for more information. We strongly suggest an Ubuntu machine
 with ROS Indigo installed.</p>
 </div>
 <p>To teleoperate the robot base in simulation, we recommend
-using the <tt class="docutils literal"><span class="pre">teleop_twist_keyboard.py</span></tt> script from
+using the <code class="docutils literal"><span class="pre">teleop_twist_keyboard.py</span></code> script from
 <a class="reference external" href="http://wiki.ros.org/teleop_twist_keyboard">teleop_twist_keyboard</a>
 package.</p>
 <div class="highlight-python"><div class="highlight"><pre>&gt;$ export ROS_MASTER_URI=http://&lt;robot_name_or_ip&gt;:11311

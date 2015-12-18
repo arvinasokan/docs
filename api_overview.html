@@ -34,7 +34,7 @@
   
     <link rel="top" title="Fetch &amp; Freight Research Edition Indigo documentation" href="index.html"/>
         <link rel="next" title="Notices" href="notices.html"/>
-        <link rel="prev" title="Tutorial: Calibrating Fetch" href="calibration.html"/> 
+        <link rel="prev" title="Tutorial: Interfacing Third Party Grippers with Fetch’s Arm" href="gripper_integration.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -226,6 +226,27 @@
 <li class="toctree-l2"><a class="reference internal" href="calibration.html#running-calibration">Running Calibration</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="gripper_integration.html">Tutorial: Interfacing Third Party Grippers with Fetch’s Arm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#mechanical-gripper-interface-of-fetch">Mechanical Gripper Interface of Fetch:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#electrical-gripper-interface-of-fetch">Electrical Gripper Interface of Fetch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#software-gripper-interface-of-fetch">Software Gripper Interface of Fetch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#outline-of-interfacing-grippers-with-fetch">Outline of Interfacing Grippers with Fetch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#removing-the-fetch-gripper">Removing the Fetch Gripper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#fetch-moveit-config">Fetch Moveit Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#robotiq-adaptive-robot-gripper-2-finger-85-fetch-integration-documentation">Robotiq Adaptive Robot Gripper 2-Finger 85 Fetch Integration Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#tried-and-tested-on">Tried and tested on</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#ros-driver-installation">Ros Driver Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#barrett-hand-bh-282-fetch-integration-documentation">Barrett Hand BH-282 Fetch Integration Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#id1">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#id2">Tried and tested on</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#software-setup">Software Setup:</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="">API Overview</a><ul>
@@ -342,8 +363,8 @@ message.</p>
 <p>Only two fields are used in the message:</p>
 <blockquote>
 <div><ul class="simple">
-<li><tt class="docutils literal"><span class="pre">linear.x</span></tt> specifies the robot&#8217;s forward velocity</li>
-<li><tt class="docutils literal"><span class="pre">angular.z</span></tt> specifies the robot&#8217;s turning velocity</li>
+<li><code class="docutils literal"><span class="pre">linear.x</span></code> specifies the robot&#8217;s forward velocity</li>
+<li><code class="docutils literal"><span class="pre">angular.z</span></code> specifies the robot&#8217;s turning velocity</li>
 </ul>
 </div></blockquote>
 <p>User applications will typically not connect directly to <cite>base_controller/command</cite>,
@@ -365,17 +386,17 @@ arm and torso (described above).</p>
 head (and head sensors) at a point of interest. This action-based interface is
 available on <cite>head_controller/point_head</cite>. It is of type
 <a class="reference external" href="http://docs.ros.org/api/control_msgs/html/action/PointHead.html">control_msgs/PointHead</a>.
-Although the interface currently does not support any of the <tt class="docutils literal"><span class="pre">pointing_axis</span></tt> or <tt class="docutils literal"><span class="pre">pointing_frame</span></tt>
+Although the interface currently does not support any of the <code class="docutils literal"><span class="pre">pointing_axis</span></code> or <code class="docutils literal"><span class="pre">pointing_frame</span></code>
 fields, it points the <cite>head_tilt_link</cite> (which is very near the camera optical
-axis) towards the <cite>target</cite> point to achieve a similar effect. A <tt class="docutils literal"><span class="pre">min_duration</span></tt> or <tt class="docutils literal"><span class="pre">max_velocity</span></tt> can also be specified.</p>
+axis) towards the <cite>target</cite> point to achieve a similar effect. A <code class="docutils literal"><span class="pre">min_duration</span></code> or <code class="docutils literal"><span class="pre">max_velocity</span></code> can also be specified.</p>
 </div>
 <div class="section" id="gripper-interface">
 <span id="gripper-api"></span><h2>Gripper Interface<a class="headerlink" href="#gripper-interface" title="Permalink to this headline">¶</a></h2>
-<p><cite>gripper_controller/command</cite> exposes a
+<p><cite>gripper_controller/gripper_action</cite> exposes a
 <a class="reference external" href="http://docs.ros.org/api/control_msgs/html/action/GripperCommand.html">control_msgs/GripperCommand</a>
-ActionServer. The gripper command takes in <tt class="docutils literal"><span class="pre">position</span></tt> and <tt class="docutils literal"><span class="pre">effort</span></tt> as parameters. Generally,
+ActionServer. The gripper command takes in <code class="docutils literal"><span class="pre">position</span></code> and <code class="docutils literal"><span class="pre">effort</span></code> as parameters. Generally,
 the gripper is commanded to a fully closed or fully opened position, so
-<tt class="docutils literal"><span class="pre">effort</span></tt> is used to limit the maximum effort. As the gripper never fully reaches
+<code class="docutils literal"><span class="pre">effort</span></code> is used to limit the maximum effort. As the gripper never fully reaches
 the closed position, the grasp strength will be determined by the maximum
 effort.</p>
 </div>
@@ -447,7 +468,7 @@ use the following service calls:</p>
         <a href="notices.html" class="btn btn-neutral float-right" title="Notices" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="calibration.html" class="btn btn-neutral" title="Tutorial: Calibrating Fetch" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="gripper_integration.html" class="btn btn-neutral" title="Tutorial: Interfacing Third Party Grippers with Fetch’s Arm" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

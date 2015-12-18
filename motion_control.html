@@ -224,6 +224,27 @@
 <li class="toctree-l2"><a class="reference internal" href="calibration.html#running-calibration">Running Calibration</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="gripper_integration.html">Tutorial: Interfacing Third Party Grippers with Fetch’s Arm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#mechanical-gripper-interface-of-fetch">Mechanical Gripper Interface of Fetch:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#electrical-gripper-interface-of-fetch">Electrical Gripper Interface of Fetch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#software-gripper-interface-of-fetch">Software Gripper Interface of Fetch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#outline-of-interfacing-grippers-with-fetch">Outline of Interfacing Grippers with Fetch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#removing-the-fetch-gripper">Removing the Fetch Gripper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#fetch-moveit-config">Fetch Moveit Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#robotiq-adaptive-robot-gripper-2-finger-85-fetch-integration-documentation">Robotiq Adaptive Robot Gripper 2-Finger 85 Fetch Integration Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#tried-and-tested-on">Tried and tested on</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#ros-driver-installation">Ros Driver Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#barrett-hand-bh-282-fetch-integration-documentation">Barrett Hand BH-282 Fetch Integration Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#id1">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#id2">Tried and tested on</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#software-setup">Software Setup:</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="api_overview.html">API Overview</a><ul>
@@ -316,7 +337,7 @@ Each MCB can then receive any of the following types of commands:</p>
 </div></blockquote>
 <p>Each MCB returns the measured effort, velocity and position of the joint it
 is controlling.</p>
-<p>Most users will want to use the high-level <a class="reference internal" href="api_overview.html#arm-api"><em>Arm and Torso</em></a> ROS API, however,
+<p>Most users will want to use the high-level <a class="reference internal" href="api_overview.html#arm-api"><span>Arm and Torso</span></a> ROS API, however,
 users can also create their own controllers as ROS plugins that run on the
 robot computer and send commands to the MCBs using the
 robot_controllers_interface package.</p>

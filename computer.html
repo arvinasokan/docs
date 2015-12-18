@@ -226,6 +226,27 @@
 <li class="toctree-l2"><a class="reference internal" href="calibration.html#running-calibration">Running Calibration</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="gripper_integration.html">Tutorial: Interfacing Third Party Grippers with Fetch’s Arm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#mechanical-gripper-interface-of-fetch">Mechanical Gripper Interface of Fetch:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#electrical-gripper-interface-of-fetch">Electrical Gripper Interface of Fetch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#software-gripper-interface-of-fetch">Software Gripper Interface of Fetch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#outline-of-interfacing-grippers-with-fetch">Outline of Interfacing Grippers with Fetch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#removing-the-fetch-gripper">Removing the Fetch Gripper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#fetch-moveit-config">Fetch Moveit Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#robotiq-adaptive-robot-gripper-2-finger-85-fetch-integration-documentation">Robotiq Adaptive Robot Gripper 2-Finger 85 Fetch Integration Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#tried-and-tested-on">Tried and tested on</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#ros-driver-installation">Ros Driver Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#barrett-hand-bh-282-fetch-integration-documentation">Barrett Hand BH-282 Fetch Integration Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#id1">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#id2">Tried and tested on</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#software-setup">Software Setup:</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="api_overview.html">API Overview</a><ul>
@@ -430,13 +451,13 @@ will be service.log.</p>
 <p>The mainboard of Fetch and Freight contains a USB audio device.
 While the device enumerates as a standard Linux audio device, we recommend
 using the <a class="reference external" href="http://wiki.ros.org/sound_play">sound_play ROS package</a> to
-access the speakers. <tt class="docutils literal"><span class="pre">sound_play</span></tt> is automatically started as
-an <a class="reference internal" href="#upstart-services"><em>upstart service</em></a> when the robot starts.
+access the speakers. <code class="docutils literal"><span class="pre">sound_play</span></code> is automatically started as
+an <a class="reference internal" href="#upstart-services"><span>upstart service</span></a> when the robot starts.
 This service is pre-configured to have the correct group-level access
 to the audio system. If using the speakers directly through a Linux
-interface, be sure to add your user to the <tt class="docutils literal"><span class="pre">audio</span></tt> group in order
+interface, be sure to add your user to the <code class="docutils literal"><span class="pre">audio</span></code> group in order
 to actually access the speakers.</p>
-<p>While the <tt class="docutils literal"><span class="pre">sound_play</span></tt> ROS interface allows users to set an audio
+<p>While the <code class="docutils literal"><span class="pre">sound_play</span></code> ROS interface allows users to set an audio
 level, the audio level set is a percentage of the audio level set
 for Linux. To adjust the Linux audio level, use the following command
 and follow the on-screen instructions:</p>

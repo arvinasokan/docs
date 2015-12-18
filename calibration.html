@@ -33,7 +33,7 @@
 
   
     <link rel="top" title="Fetch &amp; Freight Research Edition Indigo documentation" href="index.html"/>
-        <link rel="next" title="API Overview" href="api_overview.html"/>
+        <link rel="next" title="Tutorial: Interfacing Third Party Grippers with Fetch’s Arm" href="gripper_integration.html"/>
         <link rel="prev" title="Tutorial: Perception" href="perception.html"/> 
 
   
@@ -226,6 +226,27 @@
 <li class="toctree-l2"><a class="reference internal" href="#running-calibration">Running Calibration</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="gripper_integration.html">Tutorial: Interfacing Third Party Grippers with Fetch’s Arm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#mechanical-gripper-interface-of-fetch">Mechanical Gripper Interface of Fetch:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#electrical-gripper-interface-of-fetch">Electrical Gripper Interface of Fetch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#software-gripper-interface-of-fetch">Software Gripper Interface of Fetch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#outline-of-interfacing-grippers-with-fetch">Outline of Interfacing Grippers with Fetch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#removing-the-fetch-gripper">Removing the Fetch Gripper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#fetch-moveit-config">Fetch Moveit Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#robotiq-adaptive-robot-gripper-2-finger-85-fetch-integration-documentation">Robotiq Adaptive Robot Gripper 2-Finger 85 Fetch Integration Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#tried-and-tested-on">Tried and tested on</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#ros-driver-installation">Ros Driver Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#barrett-hand-bh-282-fetch-integration-documentation">Barrett Hand BH-282 Fetch Integration Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#id1">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#id2">Tried and tested on</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#software-setup">Software Setup:</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="api_overview.html">API Overview</a><ul>
@@ -316,7 +337,7 @@ pose seen by the camera.</li>
 <li>Updating the URDF and robot launch files with newly determined offsets.</li>
 </ul>
 </div></blockquote>
-<p>The <a class="reference internal" href="computer.html#upstart-services"><em>Upstart Services</em></a> that start the robot will use the launch
+<p>The <a class="reference internal" href="computer.html#upstart-services"><span>Upstart Services</span></a> that start the robot will use the launch
 file in <a href="#id1"><span class="problematic" id="id2">`</span></a>/etc/ros/indigo/robot.launch&#8217;. Therefore, the last step in calibration
 is to update that launch file and restart the drivers. Currently, the
 following aspects are updated:</p>
@@ -412,7 +433,7 @@ back to the previous calibration with:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="api_overview.html" class="btn btn-neutral float-right" title="API Overview" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="gripper_integration.html" class="btn btn-neutral float-right" title="Tutorial: Interfacing Third Party Grippers with Fetch’s Arm" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="perception.html" class="btn btn-neutral" title="Tutorial: Perception" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>

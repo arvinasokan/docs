@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Fetch &amp; Freight Manual &mdash; Fetch &amp; Freight Research Edition Indigo documentation</title>
+  <title>Barrett Hand BH-282 Fetch Integration Documentation &mdash; Fetch &amp; Freight Research Edition Indigo documentation</title>
   
 
   
@@ -32,8 +32,7 @@
   
 
   
-    <link rel="top" title="Fetch &amp; Freight Research Edition Indigo documentation" href="#"/>
-        <link rel="next" title="Introduction" href="introduction.html"/> 
+    <link rel="top" title="Fetch &amp; Freight Research Edition Indigo documentation" href="index.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -50,7 +49,7 @@
         
 
         
-          <a href="#" class="icon icon-home">
+          <a href="index.html" class="icon icon-home">
         
 
           Fetch & Freight <br/> Research Edition
@@ -281,7 +280,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="#">Fetch & Freight Research Edition</a>
+        <a href="index.html">Fetch & Freight Research Edition</a>
       </nav>
 
       
@@ -298,13 +297,13 @@
         <div class="rst-content">
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="#">Docs</a> &raquo;</li>
+    <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>Fetch &amp; Freight Manual</li>
+    <li>Barrett Hand BH-282 Fetch Integration Documentation</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="https://github.com/fetchrobotics/docs/blob/master/source/index.rst" class="fa fa-github"> Edit on GitHub</a>
+            <a href="https://github.com/fetchrobotics/docs/blob/master/source/barrett_hand.rst" class="fa fa-github"> Edit on GitHub</a>
           
         
       </li>
@@ -314,154 +313,99 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="fetch-freight-manual">
-<h1>Fetch &amp; Freight Manual<a class="headerlink" href="#fetch-freight-manual" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="introduction.html#before-you-start">Before you Start</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="safety.html">Safety</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="safety.html#safety-overview">Safety Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="safety.html#design-features">Design Features</a></li>
-<li class="toctree-l2"><a class="reference internal" href="safety.html#general-usage-guidelines">General Usage Guidelines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="safety.html#warning-labels">Warning Labels</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="in_the_box.html">Getting Started</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="in_the_box.html#what-s-in-box">What&#8217;s In Box</a></li>
-<li class="toctree-l2"><a class="reference internal" href="in_the_box.html#running-fetch-and-freight">Running Fetch and Freight</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="robot_hardware.html">Robot Hardware Overview</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="robot_hardware.html#mechanism-terminology">Mechanism Terminology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="robot_hardware.html#mechanical-overview">Mechanical Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="robot_hardware.html#electrical-overview">Electrical Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="robot_hardware.html#motion-control">Motion Control</a></li>
-<li class="toctree-l2"><a class="reference internal" href="robot_hardware.html#sensor-overview">Sensor Overview</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="computer.html">Computer Overview and Configuration</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="computer.html#default-user-account">Default User Account</a></li>
-<li class="toctree-l2"><a class="reference internal" href="computer.html#creating-user-accounts">Creating User Accounts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="computer.html#networking">Networking</a></li>
-<li class="toctree-l2"><a class="reference internal" href="computer.html#connecting-the-robot-to-a-wireless-network">Connecting the Robot to a Wireless Network</a></li>
-<li class="toctree-l2"><a class="reference internal" href="computer.html#clock-synchronization">Clock Synchronization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="computer.html#upstart-services">Upstart Services</a></li>
-<li class="toctree-l2"><a class="reference internal" href="computer.html#log-files">Log Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="computer.html#speakers-and-audio">Speakers and Audio</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="care_and_feeding.html">Care And Feeding</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#charging">Charging</a></li>
-<li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#updating-your-robot">Updating Your Robot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#re-setting-up-apt-get-sources">Re-Setting up apt-get Sources</a></li>
-<li class="toctree-l2"><a class="reference internal" href="care_and_feeding.html#cleaning-your-robot">Cleaning Your Robot</a></li>
-</ul>
-</li>
-</ul>
+  <div class="section" id="barrett-hand-bh-282-fetch-integration-documentation">
+<h1>Barrett Hand BH-282 Fetch Integration Documentation<a class="headerlink" href="#barrett-hand-bh-282-fetch-integration-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="_images/fetch_barrett.jpg"><img alt="_images/fetch_barrett.jpg" src="_images/fetch_barrett.jpg" style="width: 100%;" /></a>
 </div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>The Barrett Hand is a three fingered hand from Barrett Technologies. The
+hand uses CAN-BUS or RS-232 for communication, these connectors connect
+to a control box which handles both the power supply and the
+communications of the hand. For this particular setup a USB to CAN
+adapter is used (Preferably from PEAK)</p>
 </div>
-<div class="section" id="tutorials">
-<h1>Tutorials<a class="headerlink" href="#tutorials" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="visualization.html">Tutorial: Visualization</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="visualization.html#visualizing-with-rviz">Visualizing with RVIZ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="visualization.html#using-the-runtime-monitor">Using the Runtime Monitor</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="gazebo.html">Tutorial: Gazebo Simulation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="gazebo.html#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gazebo.html#starting-the-simulator">Starting the Simulator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gazebo.html#simulating-a-freight">Simulating a Freight</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gazebo.html#visualizing-with-rviz">Visualizing with RVIZ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gazebo.html#running-the-mobile-manipulation-demo">Running the Mobile Manipulation Demo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gazebo.html#simulation-vs-real-robots">Simulation vs. Real Robots</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="teleop.html">Tutorial: Robot Teleop</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="teleop.html#using-the-robot-joystick">Using the Robot Joystick</a></li>
-<li class="toctree-l2"><a class="reference internal" href="teleop.html#moving-the-base-with-your-keyboard">Moving the Base with your Keyboard</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="navigation.html">Tutorial: Navigation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="navigation.html#running-navigation-in-gazebo">Running Navigation in Gazebo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="navigation.html#building-a-map">Building A Map</a></li>
-<li class="toctree-l2"><a class="reference internal" href="navigation.html#sending-waypoints">Sending Waypoints</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="manipulation.html">Tutorial: Manipulation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="manipulation.html#getting-started">Getting Started</a></li>
-<li class="toctree-l2"><a class="reference internal" href="manipulation.html#running-moveit">Running MoveIt!</a></li>
-<li class="toctree-l2"><a class="reference internal" href="manipulation.html#running-the-pick-and-place-demo">Running the Pick and Place Demo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="manipulation.html#more-information-and-tutorials-on-moveit">More information and Tutorials on MoveIt!</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="perception.html">Tutorial: Perception</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="perception.html#head-camera-topics">Head Camera Topics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="perception.html#running-the-pick-and-place-demo">Running the Pick and Place Demo</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="calibration.html">Tutorial: Calibrating Fetch</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="calibration.html#understanding-calibration">Understanding Calibration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="calibration.html#calibrate-robot-tool">Calibrate Robot Tool</a></li>
-<li class="toctree-l2"><a class="reference internal" href="calibration.html#running-calibration">Running Calibration</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="gripper_integration.html">Tutorial: Interfacing Third Party Grippers with Fetch’s Arm</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#mechanical-gripper-interface-of-fetch">Mechanical Gripper Interface of Fetch:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#electrical-gripper-interface-of-fetch">Electrical Gripper Interface of Fetch</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#software-gripper-interface-of-fetch">Software Gripper Interface of Fetch</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#outline-of-interfacing-grippers-with-fetch">Outline of Interfacing Grippers with Fetch</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#removing-the-fetch-gripper">Removing the Fetch Gripper</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#fetch-moveit-config">Fetch Moveit Config</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#robotiq-adaptive-robot-gripper-2-finger-85-fetch-integration-documentation">Robotiq Adaptive Robot Gripper 2-Finger 85 Fetch Integration Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#barrett-hand-bh-282-fetch-integration-documentation">Barrett Hand BH-282 Fetch Integration Documentation</a></li>
-</ul>
-</li>
-</ul>
+<div class="section" id="tried-and-tested-on">
+<h2>Tried and tested on<a class="headerlink" href="#tried-and-tested-on" title="Permalink to this headline">¶</a></h2>
+<p>Operating System : Linux Ubuntu 14.04.3 LTS</p>
+<p>Kernel Version : 3.16.0-45-generic</p>
 </div>
+<div class="section" id="software-setup">
+<h2>Software Setup:<a class="headerlink" href="#software-setup" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Before installing the ROS driver, the latest version of the Peak CAN drivers must be installed. Please note that for recent kernel versions, only the recent version of the Peak CAN drivers will work properly.</p>
 </div>
-<div class="section" id="ros-apis">
-<h1>ROS APIs<a class="headerlink" href="#ros-apis" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="api_overview.html">API Overview</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="api_overview.html#arm-and-torso">Arm and Torso</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api_overview.html#base-interface">Base Interface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api_overview.html#head-interface">Head Interface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api_overview.html#gripper-interface">Gripper Interface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api_overview.html#head-camera-interface">Head Camera Interface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api_overview.html#laser-interface">Laser Interface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api_overview.html#imu-interface">IMU Interface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api_overview.html#resetting-breakers">Resetting Breakers</a></li>
-</ul>
-</li>
-</ul>
+<p>Peak CAN drivers and python wrappers installation :</p>
+<div class="highlight-python"><div class="highlight"><pre>&gt;$ sudo apt-get install swig
+</pre></div>
 </div>
+<p>Installing POPT</p>
+<p>Go to <a class="reference external" href="http://www.linuxfromscratch.org/blfs/view/svn/general/popt.html">http://www.linuxfromscratch.org/blfs/view/svn/general/popt.html</a></p>
+<p>Download popt-1.16.tar.gz and extract it,</p>
+<div class="highlight-python"><div class="highlight"><pre>&gt;$ ./configure --prefix=/usr --disable-static &amp;&amp; make
+
+&gt;$ sudo make install
+</pre></div>
 </div>
-<div class="section" id="legal">
-<h1>Legal<a class="headerlink" href="#legal" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="notices.html">Notices</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="notices.html#fcc-notice">FCC Notice</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notices.html#copyright-notices-for-open-source-software">Copyright Notices for Open Source Software</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notices.html#trademarks">Trademarks</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
-</ul>
+<p>Peak CAN Drivers:</p>
+<p>Go to <a class="reference external" href="http://www.peak-system.com/">http://www.peak-system.com/</a> and download the latest version of the
+Peak CAN drivers.</p>
+<p>once downloaded, extract the package,</p>
+<div class="highlight-python"><div class="highlight"><pre>&gt;$ make NET=NO_NETDEV_SUPPORT
+
+&gt;$ sudo make install
+</pre></div>
 </div>
-<div class="section" id="indices-and-tables">
-<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><a class="reference internal" href="genindex.html"><span>Index</span></a></li>
-<li><a class="reference internal" href="py-modindex.html"><span>Module Index</span></a></li>
-<li><a class="reference internal" href="search.html"><span>Search Page</span></a></li>
-</ul>
+<p>Pcan Python:</p>
+<p>Once the Peak CAN drivers are installed,</p>
+<div class="highlight-python"><div class="highlight"><pre>&gt;$ git clone https://github.com/RobotnikAutomation/pcan_python.git
+
+&gt;$ make
+
+&gt;$ sudo make install
+</pre></div>
+</div>
+<p>Add /usr/lib to the PYTHONPATH in order to find the module.</p>
+<div class="highlight-python"><div class="highlight"><pre>&gt;$ Example: export PYTHONPATH=/usr/lib:$PYTHONPATH
+</pre></div>
+</div>
+<p>Once all these drivers have been installed without any errors, the ROS
+drivers/Controller can be used.</p>
+<p>ROS Driver Installation:</p>
+<div class="highlight-python"><div class="highlight"><pre>&gt;$  mkdir -p ~/bhand/src
+
+&gt;$  cd bhand/src
+
+&gt;$  catkin_init_workspace
+
+&gt;$  cd ..
+
+&gt;$  catkin_make
+
+&gt;$  cd src
+
+&gt;$  git clone https://github.com/RobotnikAutomation/barrett\_hand
+
+&gt;$  cd ..
+
+&gt;$  catkin_make
+
+&gt;$  source devel/setup.bash
+</pre></div>
+</div>
+<p>Now the ROS drivers have been installed and ready to use</p>
+<p>To launch the controller,</p>
+<div class="highlight-python"><div class="highlight"><pre>&gt;$ roslaunch bhand_controller bhand_controller.launch
+</pre></div>
+</div>
+<p>The controller will show CAN Error if the CAN drivers have not been
+installed properly.</p>
+<p>To control the barrett hand, through the RQT interface,</p>
+<div class="highlight-python"><div class="highlight"><pre>&gt;$ rosrun rqt_bhand rqt_bhand
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -469,13 +413,6 @@
            </div>
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="introduction.html" class="btn btn-neutral float-right" title="Introduction" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-    </div>
   
 
   <hr/>

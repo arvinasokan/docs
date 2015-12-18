@@ -224,6 +224,27 @@
 <li class="toctree-l2"><a class="reference internal" href="calibration.html#running-calibration">Running Calibration</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="gripper_integration.html">Tutorial: Interfacing Third Party Grippers with Fetch’s Arm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#mechanical-gripper-interface-of-fetch">Mechanical Gripper Interface of Fetch:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#electrical-gripper-interface-of-fetch">Electrical Gripper Interface of Fetch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#software-gripper-interface-of-fetch">Software Gripper Interface of Fetch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#outline-of-interfacing-grippers-with-fetch">Outline of Interfacing Grippers with Fetch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#removing-the-fetch-gripper">Removing the Fetch Gripper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#fetch-moveit-config">Fetch Moveit Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#robotiq-adaptive-robot-gripper-2-finger-85-fetch-integration-documentation">Robotiq Adaptive Robot Gripper 2-Finger 85 Fetch Integration Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#tried-and-tested-on">Tried and tested on</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#ros-driver-installation">Ros Driver Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#barrett-hand-bh-282-fetch-integration-documentation">Barrett Hand BH-282 Fetch Integration Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#id1">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#id2">Tried and tested on</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#software-setup">Software Setup:</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="api_overview.html">API Overview</a><ul>
@@ -303,7 +324,7 @@ comprises:</p>
 <li>The robot computer, running ROS, sends commands to the mainboard
 and gripper board over an Ethernet interface. This same Ethernet
 interface is used to communicate with the scanning laser range
-finder in the base of the robot. The <tt class="docutils literal"><span class="pre">fetch_drivers</span></tt> package
+finder in the base of the robot. The <code class="docutils literal"><span class="pre">fetch_drivers</span></code> package
 provides an interface from the robot computer to the mainboard,
 and the default gripper.</li>
 </ul>
@@ -334,13 +355,13 @@ each MCB is where the real-time control loops run.</li>
 <p>Fetch and Freight both have two 12V Sealed Lead Acid (SLA) batteries located
 in the robot base. The batteries are connected in series, providing the nominal
 24V power rail for the robot. These batteries are kept charged by the mainboard (see
-<a class="reference internal" href="care_and_feeding.html#charging"><em>Charging</em></a>).</p>
+<a class="reference internal" href="care_and_feeding.html#charging"><span>Charging</span></a>).</p>
 <div class="section" id="breakers">
 <h2>Breakers<a class="headerlink" href="#breakers" title="Permalink to this headline">¶</a></h2>
 <p>There are several breakers within the robot. These are designed in order to prevent
 damage to the robot if cabling should become worn or shorted out, or in the case
 of sudden, unexpected overload of a joint. The table below describes each breaker,
-using the names that are used in <tt class="docutils literal"><span class="pre">fetch_drivers</span></tt> and diagnostics:</p>
+using the names that are used in <code class="docutils literal"><span class="pre">fetch_drivers</span></code> and diagnostics:</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="22%" />

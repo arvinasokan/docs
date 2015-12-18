@@ -226,6 +226,27 @@
 <li class="toctree-l2"><a class="reference internal" href="calibration.html#running-calibration">Running Calibration</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="gripper_integration.html">Tutorial: Interfacing Third Party Grippers with Fetch’s Arm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#mechanical-gripper-interface-of-fetch">Mechanical Gripper Interface of Fetch:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#electrical-gripper-interface-of-fetch">Electrical Gripper Interface of Fetch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#software-gripper-interface-of-fetch">Software Gripper Interface of Fetch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#outline-of-interfacing-grippers-with-fetch">Outline of Interfacing Grippers with Fetch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#removing-the-fetch-gripper">Removing the Fetch Gripper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#fetch-moveit-config">Fetch Moveit Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#robotiq-adaptive-robot-gripper-2-finger-85-fetch-integration-documentation">Robotiq Adaptive Robot Gripper 2-Finger 85 Fetch Integration Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#tried-and-tested-on">Tried and tested on</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#ros-driver-installation">Ros Driver Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gripper_integration.html#barrett-hand-bh-282-fetch-integration-documentation">Barrett Hand BH-282 Fetch Integration Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#id1">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#id2">Tried and tested on</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gripper_integration.html#software-setup">Software Setup:</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="api_overview.html">API Overview</a><ul>
@@ -319,8 +340,8 @@ set to your robot for the same reasons.</p>
 </div>
 <div class="section" id="starting-the-simulator">
 <h2>Starting the Simulator<a class="headerlink" href="#starting-the-simulator" title="Permalink to this headline">¶</a></h2>
-<p>The <tt class="docutils literal"><span class="pre">fetch_gazebo</span></tt> and <tt class="docutils literal"><span class="pre">fetch_gazebo_demo</span></tt> packages provide the Gazebo
-environment for Fetch. <tt class="docutils literal"><span class="pre">fetch_gazebo</span></tt> includes several launch files:</p>
+<p>The <code class="docutils literal"><span class="pre">fetch_gazebo</span></code> and <code class="docutils literal"><span class="pre">fetch_gazebo_demo</span></code> packages provide the Gazebo
+environment for Fetch. <code class="docutils literal"><span class="pre">fetch_gazebo</span></code> includes several launch files:</p>
 <blockquote>
 <div><ul class="simple">
 <li>simulation.launch spawns a robot in an empty world.</li>
@@ -368,7 +389,7 @@ with ROS Indigo installed.</p>
 </div>
 <p>You can now <a class="reference external" href="http://gazebosim.org/tutorials?tut=drcsim_visualization&amp;cat=drcsim#VisualizingtheRobotmodel">manually set up your RVIZ visualization</a>
 or re-run RVIZ with a configuration file using the command line.
-The default <tt class="docutils literal"><span class="pre">.rviz</span></tt> configuration file for Fetch can be loaded using:</p>
+The default <code class="docutils literal"><span class="pre">.rviz</span></code> configuration file for Fetch can be loaded using:</p>
 <div class="highlight-python"><div class="highlight"><pre>&gt;$ roscd fetch_navigation/config
 &gt;$ export ROS_MASTER_URI=http://&lt;robot_name_or_ip&gt;:11311
 &gt;$ rviz -d navigation.rviz
@@ -399,7 +420,7 @@ the environment.</li>
 <li>move_group.launch - this is the MoveIt configuration which can plan for
 the movement of the arm.</li>
 <li>basic_grasping_perception - this is a simple demo found in the
-<tt class="docutils literal"><span class="pre">simple_grasping</span></tt> package which segments objects on tables and computes
+<code class="docutils literal"><span class="pre">simple_grasping</span></code> package which segments objects on tables and computes
 grasps for them.</li>
 <li>demo.py - this our specific demo which navigates the robot from the
 starting pose in Gazebo to the table, raises the torso, lowers the head
